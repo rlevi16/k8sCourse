@@ -5,12 +5,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: spring
+      app: spring-music
   replicas: 2
   template:
     metadata:
       labels:
-        app: spring
+        app: spring-music
     spec:
       containers:
       - name: spring-music
