@@ -1,17 +1,13 @@
-kind: Service      # Create new service
+kind: Service     
 apiVersion: v1
 metadata:
-  name: my-service # Name of the service
+  name: spring-service
 spec:
   selector:
-    app: spring-music    # Run on any pod(s) with label - app: myapp
-  ports:          # Map incoming port to target port
-  - name: http    # Setting multiple ports listterns
+    app: spring-music   
+  ports:         
+  - name: http   
     protocol: TCP
     port: 80
-    targetPort: 9376
-  - name: https
-    protocol: TCP
-    port: 443
-    targetPort: 9388
+    targetPort: 8080
   type: LoadBalancer
